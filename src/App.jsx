@@ -6,6 +6,8 @@ function App() {
       ? import.meta.env.VITE_REACT_APP_LOCAL_BASE_URL
       : import.meta.env.VITE_REACT_APP_SERVER_BASE_URL;
 
+  console.log('ENV: ', import.meta.env);
+
   useEffect(() => {
     async function fetchData() {
       const response = await fetch(`${baseUrl}/api`);
